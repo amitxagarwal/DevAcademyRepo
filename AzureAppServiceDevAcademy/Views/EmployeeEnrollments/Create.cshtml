@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Registration</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>EmployeeEnrollment</h4>
+    <hr />
+    <h2 style="font-family:serif;font-size:20px">Click below to Register for the upcoming Developer Academy.</h2>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Register" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
